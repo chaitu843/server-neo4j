@@ -1,0 +1,31 @@
+{
+  "name": "server-neo4j",
+  "version": "1.0.0",
+  "description": "Server connecting to neo4j database and perform basic queries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaitu843/server-neo4j.git"
+  },
+  "keywords": [
+    "neo4j-driver",
+    "express",
+    "REST",
+    "neo4j",
+    "cypher"
+  ],
+  "author": "Chaitu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaitu843/server-neo4j/issues"
+  },
+  "homepage": "https://github.com/chaitu843/server-neo4j#readme",
+  "dependencies": {
+    "neo4j-driver": "^1.7.6",
+    "nodemon": "^1.19.4"
+  }
+}
