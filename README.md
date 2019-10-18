@@ -25,4 +25,13 @@ neo4j-driver
 
 =============================================================================================================================
 
+Points to be Noted
 
+1. Driver is being connected to database using bolt url. When tried connecting to http/https, error (Headers is not defined) --> Can     investigate on that.
+
+2. After running each query, return the properties you need and access them using record.get()
+
+3. Driver converts integer values into type neo4j.Integer
+
+4. If you wanna pass whole object into cypher query, only option is you need to prepare a string in a way it needs and then pass it.
+   It won't accept Object, Map, JSON.stringfy(gives double quotes);
