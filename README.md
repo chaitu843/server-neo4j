@@ -1,6 +1,17 @@
 # server-neo4j
 A Basic Express server which connects to neo4j database using official driver provided by neo4j
 
+
+===========================================================================================================================
+
+Express Server connected with neo4j database using neo4j-driver
+
+Basic APIs enough to do CRUD operations are exposed
+
+APIs are being made taking only two nodes (PERSON and MOVIE) into consideration, without any relationships
+
+Now relationships part can be done based on the requirement
+
 ============================================================================================================================
 
 Using the official driver of neo4j 'neoj-driver' to connect to the database
@@ -35,3 +46,5 @@ Points to be Noted
 
 4. If you wanna pass whole object into cypher query, only option is you need to prepare a string in a way it needs and then pass it.
    It won't accept Object, Map, JSON.stringfy(gives double quotes);
+
+5 . No Single quotes while forming a json in POSTMAN

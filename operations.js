@@ -53,7 +53,7 @@ let database = {
                                                         RETURN n`)
         return task
             .then((result) => {
-                let records = [], props = createFlatProps(result.records[0].get('N').properties);
+                let records = [], props = createFlatProps(result.records[0].get('n').properties);
                 records.push(props);
                 session.close();
                 return records;
@@ -69,7 +69,7 @@ let database = {
     getAllNodesWithLabel(label) {
         let task = session.run(`MATCH (N:${label}) RETURN N` ), records = [];
         return task.then(result => {
-            result.records.forEach(record => createFlatProps(records.push(record.get('N').properties)));
+            result.records.forEach(record => records.push(createFlatProps(record.get('N').properties)));
             return records;
         })
     },

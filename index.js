@@ -33,25 +33,25 @@ app.get(`/db/node/label/all`, (req, res) => {
 
 // To get a node with label an prop
 app.get(`/db/node/label/one`, (req, res) => {
-    database.getAllNodesWithLabel(req.query.label, req.query.id)
+    database.getANodeWithLabelAndIdentity(req.query.label, req.query.id)
             .then(result => res.send(result));
 })
 
 // To delete all nodes with label
-app.delete(`/db/node/label`, (req, res) => {
+app.delete(`/db/node/label/all`, (req, res) => {
     database.deleteAllNodesWithLabel(req.query.label)
             .then(() => res.send({status: 'success', message: 'Deleted all the nodes with the given label'}))
 })
 
 // To delete a node with label and prop
 // To delete all nodes with label
-app.delete(`/db/node/label`, (req, res) => {
+app.delete(`/db/node/label/one`, (req, res) => {
     database.deleteANodeWithLabelAndIdentity(req.query.label, req.query.id)
             .then(() => res.send({status: 'success', message: 'Deleted the node with the given label and id'}))
 })
 
 // To delete the database
-app.delete(`/db/node/label`, (req, res) => {
+app.delete(`/db`, (req, res) => {
     database.deleteDatabase()
             .then(() => res.send({status: 'success', message: 'Deleted the contents of database'}))
 })
